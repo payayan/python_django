@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+<h1 class="mt-5">投稿の{{ object|yesno:'編集,新規作成'}}</h1>
+
+<form action='' mothod='post'>{% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content=object|yesno:"更新,作成" size="md %"}
+</form>
+
+<div class="mt-3">
+    <a href="{% url 'bbs:index' %}">{% bootstrap_button button_type="submit" button_class="btn-secondary" content="戻る"
+        size="md" %}</a>
+</div>
+
+{% endblock %}

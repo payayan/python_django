@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djangoを使ってみよう!</title>
+</head>
+
+<body>
+    <h1>クラスベースの汎用ビューを使ってみよう</h1>
+    {% for article in object_list %}
+    <p>{{ article.content }}</p>
+    {% endfor %}
+</body>
+
+</html>
